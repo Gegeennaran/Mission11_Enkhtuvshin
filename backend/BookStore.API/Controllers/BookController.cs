@@ -34,7 +34,7 @@ namespace BookStore.API.Controllers
                 .Take(pageMany)
                 .ToList();
 
-            var totalBooks = _bookContext.Books.Count();
+            var totalBooks = query.Count();
             var someObj = new
             {
                 Books = result,
