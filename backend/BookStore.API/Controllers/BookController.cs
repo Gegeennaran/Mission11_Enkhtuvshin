@@ -29,7 +29,7 @@ namespace BookStore.API.Controllers
                     : query.OrderBy(b => b.Title);
             }
             
-            var result = _bookContext.Books
+            var result = query
                 .Skip((pageNum-1)*pageMany)
                 .Take(pageMany)
                 .ToList();
